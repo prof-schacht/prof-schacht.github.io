@@ -87,8 +87,16 @@
             overflow: hidden;
         }
 
+        .iframe-container-rectangle {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+            overflow: hidden;
+        }
+
         .iframe-container-large iframe,
-        .iframe-container-small iframe {
+        .iframe-container-small iframe,
+        .iframe-container-rectangle iframe {
             position: absolute;
             top: 0;
             left: 0;
@@ -193,6 +201,44 @@
                 </div>          
             </div>
         </div>
+
+
+          <!-- LogitLens row with three smaller plots -->
+          <h2 class="section-header">LogitLens - Entropy, KL-divergence, and target probability</h2>
+          <div class="row">
+              <div class="grid-3-col">
+                  <!-- Additional Plot 1 -->
+                  <div class="panel">
+                      <div class="panel-header">
+                          <h2 class="panel-title">Entropy</h2>
+                      </div>
+                      <div class="iframe-container-rectangle">
+                          <iframe src="logitlens/entropy_comparison_gemma_2_9b_run.html" title="Additional Plot 1"></iframe>
+                      </div>
+                  </div>
+  
+                  <!-- Additional Plot 2 -->
+                  <div class="panel">
+                      <div class="panel-header">
+                          <h2 class="panel-title">KL-divergence</h2>
+                      </div>
+                      <div class="iframe-container-rectangle">
+                          <iframe src="logitlens/kl_divergence_comparison_gemma_2_9b_run.html" title="Additional Plot 2"></iframe>
+                      </div>
+                  </div>
+                  <!-- Additional Plot 3 -->
+                  <div class="panel">
+                      <div class="panel-header">
+                          <h2 class="panel-title">Target probability</h2>
+                      </div>
+                      <div class="iframe-container-rectangle">
+                          <iframe src="logitlens/target_probability_comparison_gemma_2_9b_run.html" title="Additional Plot 3"></iframe>
+                      </div>
+                  </div>
+        
+              </div>
+          </div>
+
             <!-- Third row with three smaller plots -->
             <h2 class="section-header">Neuronpedia</h2>
             <div class="row">
